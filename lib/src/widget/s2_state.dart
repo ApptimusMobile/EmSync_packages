@@ -1,4 +1,4 @@
-import 'package:awesome_select/awesome_select.dart';
+import 'package:at_multi_select/at_multi_select.dart';
 import 'package:collection/collection.dart' show ListEquality;
 import 'package:flutter/material.dart';
 

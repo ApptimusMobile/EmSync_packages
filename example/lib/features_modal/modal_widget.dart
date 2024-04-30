@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:awesome_select/awesome_select.dart';
+import 'package:at_multi_select/at_multi_select.dart';
 
 class FeaturesModalWidget extends StatefulWidget {
   @override
@@ -34,8 +34,7 @@ class _FeaturesModalWidgetState extends State<FeaturesModalWidget> {
       children: <Widget>[
         const SizedBox(height: 7),
         SmartSelect<int?>.single(
-          title:
-              'Overall, how satisfied are you with awesome_select package?',
+          title: 'Overall, how satisfied are you with at_multi_select package?',
           selectedValue: _question1,
           onChange: (selected) {
             setState(() => _question1 = selected.value);
@@ -92,7 +91,7 @@ class _FeaturesModalWidgetState extends State<FeaturesModalWidget> {
         ),
         SmartSelect<int>.multiple(
           title:
-              'Which of following words would you use to describe awesome_select?',
+              'Which of following words would you use to describe at_multi_select?',
           selectedValue: _question2,
           onChange: (selected) {
             setState(() => _question2 = selected.value);

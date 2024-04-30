@@ -1,5 +1,5 @@
 import 'package:async/async.dart';
-import 'package:awesome_select/awesome_select.dart';
+import 'package:at_multi_select/at_multi_select.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +38,8 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
           ),
           choiceActiveStyle: S2ChoiceStyle(
             raised: true,
-            highlightColor: Theme.of(context).colorScheme.secondary.withOpacity(.4),
+            highlightColor:
+                Theme.of(context).colorScheme.secondary.withOpacity(.4),
           ),
           choiceSecondaryBuilder: (context, state, choice) => CircleAvatar(
             backgroundImage: NetworkImage(choice.meta['picture']['thumbnail']),
@@ -80,7 +81,8 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
                 return S2Tile.fromState(
                   state,
                   isTwoLine: true,
-                  isLoading: snapshot.connectionState == ConnectionState.waiting,
+                  isLoading:
+                      snapshot.connectionState == ConnectionState.waiting,
                   leading: const SizedBox(
                     width: 40,
                     height: 40,
@@ -219,7 +221,8 @@ class _FeaturesOptionAsyncState extends State<FeaturesOptionAsync> {
     return S2Choice.listFrom<String, dynamic>(
       source: res.data['results'],
       value: (index, item) => item['email'],
-      title: (index, item) => item['name']['first'] + ' ' + item['name']['last'],
+      title: (index, item) =>
+          item['name']['first'] + ' ' + item['name']['last'],
       subtitle: (index, item) => item['email'],
       group: (index, item) => item['gender'],
       meta: (index, item) => item,

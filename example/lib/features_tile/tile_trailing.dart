@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:awesome_select/awesome_select.dart';
+import 'package:at_multi_select/at_multi_select.dart';
 import '../choices.dart' as choices;
 
 class FeaturesTileTrailing extends StatefulWidget {
